@@ -1,0 +1,24 @@
+// Q4.1
+use members_st10440871;
+
+// Q4.2
+db.members.insertMany([
+  {
+    "Members Name": "Debbie",
+    "Members Surname": "Theart",
+    "Date of Birth": ISODate("1980-03-17T00:00:00Z")
+  },
+  {
+    "Members Name": "Thomas",
+    "Members Surname": "Duncan",
+    "Date of Birth": ISODate("1976-08-12T00:00:00Z")
+  }
+]);
+
+// Q4.3
+db.members.find().pretty();
+
+// Q4.4 
+db.members.find(
+  { "Date of Birth": { $gt: ISODate("1979-01-12T00:00:00Z") } }
+).pretty();
